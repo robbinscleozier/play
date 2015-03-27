@@ -1,0 +1,27 @@
+function labelController($scope, $rootScope, app_service) {
+
+  $scope.labels = [];
+  $scope.shows = [];
+
+  $scope.labelFilter = function(label) {
+  	label.name = label.name.toLowerCase();
+  	return label;
+  };
+
+  $scope.getLabels = function() {
+    app_service.getLabels().then(function(response){
+      $scope.labels = response.data;
+    });
+  };
+
+  $scope.getShows = function() {
+    app_service.getShows().then(function(response){
+      $scope.shows = response.data;
+    });
+  };
+
+  $scope.init = (function() {
+    $scope.getLabels();
+    $scope.getShows();
+  })();
+}

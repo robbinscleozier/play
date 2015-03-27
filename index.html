@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+ 	<link rel="stylesheet" href="css/bootstrap.min.css" />
+ 	<link rel="stylesheet" href="css/jasny-bootstrap.min.css">
+
+ 	<link rel="stylesheet" href="css/style.css" />
+</head>
+<body ng-app="complexTvApp">
+
+<nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation" ng-controller="labelController">
+  <a class="navmenu-brand" href="#">Brand</a>
+
+  <ul class="nav navmenu-nav">
+  	<li class="nav-header">List header</li>
+    <li><a class="navlink" href="#/"> Latest </a> </li>
+	<li><a class="navlink" href="#/featured"> Featured </a> </li>
+
+	<li class="nav-header">Categories</li>
+	<li class="" ng-repeat="label in labels | filter:labelFilter">
+	<a class="navlink" href="#/videos/{{label.name}}"> {{label.name}} </a> 
+	</li>
+
+	<li class="nav-header">Shows</li>
+	<li class="" ng-repeat="show in shows">
+		<a class="navlink" href="#/show/{{show.name}}"> {{show.name}} </a>
+	</li>
+
+  </ul>
+
+</nav>
+<div class="navbar navbar-default navbar-fixed-top">
+
+  <a class="navbar-brand" href="#">
+    <img alt="Brand" id="logo" src="http://svg.complex.com/svg/complex-tv-logo-light.svg">
+  </a>
+  <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+</div>
+
+<br/><br/><br/><br/>
+<div ng-view>
+</div>
+
+
+<script src="config.js"></script>
+<script src="angular.js"></script>
+<script src="app/app.js"></script>
+<script src="app/controllers/label_c.js"></script>
+<script src="app/controllers/home_c.js"></script>
+<script src="app/controllers/featured_c.js"></script>
+<script src="app/controllers/video_c.js"></script>
+<script src="app/controllers/videoplay_c.js"></script>
+<script src="app/models/app_service.js"></script>
+<script src="js/jquery-1.11.2.min.js"> </script>
+<script src="js/jasny-bootstrap.min.js"></script>
+<script src='http://player.ooyala.com/v3/556f8260656c47a4ab49bf6f2dde85f3'></script>
+
+<script>
+	$(document).ready(function() {
+		$(document).on("click", ".navlink", function() {
+  			$('.navmenu').offcanvas('hide');
+		});
+	});
+</script>
+
+</body>
+</html>

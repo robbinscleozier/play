@@ -1,0 +1,7 @@
+<div class="" ng-repeat="video in videos">
+	<p class"videoTitle">{{video.display_title}} </p>
+	<a href="#/play/{{video.embed_code}}"><img src="{{video.thumbnail_image_url}}" /> </a>
+	<a type="button playButton" class="btn btn-default btn-lg">
+	  <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Watch
+	</a>
+</div>
