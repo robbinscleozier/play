@@ -16,7 +16,7 @@ function labelController($scope, $rootScope, app_service) {
 
   $scope.getShows = function() {
     app_service.getShows().then(function(response){
-      $scope.shows = response.data;
+      $scope.shows = response.data.splice(0, 6);
     });
   };
 
