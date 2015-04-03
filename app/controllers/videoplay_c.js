@@ -3,6 +3,7 @@ function videoPlayController($scope, $routeParams, $rootScope, app_service) {
   $scope.videoInit = false;
 
   $scope.createVideo = function(external_id) {
+    return;
   	OO.ready(function() {
 
   		jQuery("#player").remove();

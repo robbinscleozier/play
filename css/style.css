@@ -20,14 +20,21 @@ p {
 	margin-bottom: 4px;
 	color: #888;
 }
-.navmenu li {
-	margin-left: 5px;
+.navbar-brand {
+	background-color: #000 !important;
+	color: #fff;
 }
-.navmenu, .navmenu-default, .navbar-default {
-	background-color: #000;
+.navbar-app .btn {
+	color: #fff;
 }
-.navmenu-fixed-left {
-	background-color: #333;
+.app-body, .app-content {
+	background-color: #FFF;
+}
+li.list-group-item {
+	color: black !important;
+}
+.list-group-item, a.list-group-item{
+	text-transform: capitalize;
 }
 #logo {
 	width: 120px;
@@ -42,6 +49,9 @@ a:hover {
 }
 .videoTitle {
 	font-weight: 900;
+}
+.scrollable-header img {
+	margin-left: 15px;
 }
 .image, img {
 	width: 95%;
