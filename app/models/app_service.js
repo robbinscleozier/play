@@ -39,6 +39,10 @@ complexTvApp.factory('app_service', ['$rootScope', '$q', '$http',
       return self.makePost('labels/' + label +'/popular_videos');
     };
 
+    self.getComplexNews = function() {
+      return self.makePost('tags/complex-news/latest');
+    };
+
     return {
       
       getPopularVideos: function() {
@@ -75,8 +79,11 @@ complexTvApp.factory('app_service', ['$rootScope', '$q', '$http',
 
       getRelatedVideos: function() {
         return self.getRelatedVideos();
-      }
+      },
 
+      getComplexNews: function() {
+        return self.getComplexNews();
+      }
     };
   }
 ]);

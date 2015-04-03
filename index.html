@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="http://mobileangularui.com/dist/css/mobile-angular-ui-base.min.css" />
     <link rel="stylesheet" href="http://mobileangularui.com/dist/css/mobile-angular-ui-desktop.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="http://bxslider.com/lib/jquery.bxslider.css" />
   </head>
 
   <body ng-app="complexTvApp">
@@ -24,7 +25,8 @@
   <h1 class="scrollable-header app-name"><img alt="Brand" id="logo" src="http://svg.complex.com/svg/complex-tv-logo-light.svg"></small></h1>  
   <div class="scrollable-content" ng-controller="labelController">
     <div class="list-group" ui-turn-off='uiSidebarLeft'>
-      <a class="list-group-item" href="#/">Latest </a>
+      <a class="list-group-item" href="#/"> Home </a>
+      <a class="list-group-item" href="#/latest">Latest </a>
       <a class="list-group-item" href="#/featured">Featured </a>
 
       <li class="list-group-item" href="#"> Channels </li>
@@ -48,7 +50,7 @@
         </div>
         <div class="btn-group pull-left">
           <div ui-toggle="uiSidebarLeft" class="btn sidebar-toggle">
-            <i class="fa fa-bars"></i> Menu
+            <i class="fa fa-bars"></i> 
           </div>
         </div>
       </div>
@@ -67,21 +69,24 @@
 
 
     <script src="config.js"></script>
-
+   
+  <script src="js/jquery-1.11.2.min.js"> </script>
+    <script src="http://bxslider.com/lib/jquery.bxslider.js"> </script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.0/angular-route.min.js"></script>
     <script src="http://mobileangularui.com/dist/js/mobile-angular-ui.gestures.min.js"></script>
     <script src="http://mobileangularui.com/dist/js/mobile-angular-ui.min.js"></script>
 
 
+
 	<script src="app/app.js"></script>
 	<script src="app/controllers/label_c.js"></script>
 	<script src="app/controllers/home_c.js"></script>
+  <script src="app/controllers/latest_c.js"></script>
 	<script src="app/controllers/featured_c.js"></script>
 	<script src="app/controllers/video_c.js"></script>
 	<script src="app/controllers/videoplay_c.js"></script>
 	<script src="app/controllers/shows_c.js"></script>
 	<script src="app/models/app_service.js"></script>
-	<script src="js/jquery-1.11.2.min.js"> </script>
 </body>
 </html>

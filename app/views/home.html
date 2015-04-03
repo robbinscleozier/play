@@ -1,8 +1,62 @@
-<div class="" ng-repeat="video in latest">
-	<p class"videoTitle">{{video.display_title}} </p>
-	<img src="{{video.mobile_image_url}}" class="image" />
+<div class="homepage">
+
+<h3 class="homepageTitle" ng-cloak> Complex News Videos </h3>
+<div class="newsSlider">
+	<div class="slide" ng-repeat="video in news" news-slider-complete>
+			
+		<a href="#/play/{{video.embed_code}}" class="">
+			<img class="image" src="{{video.preview_image_url}}" />
+		</a>
+
+		<a href="#/play/{{video.embed_code}}" type="button playButton" class="btn btn-default btn-lg">
+
+		<span class="glyphicon glyphicon-play" aria-hidden="true"> Watch</span> 
+		</a>
+	</div>
+</div>
+
+<h3 class="homepageTitle" ng-cloak> Popular Videos </h3>
+<div class="popularSlider">
+	<div class="slide" ng-repeat="video in popular" popular-slider-complete>
+			
+		<a href="#/play/{{video.embed_code}}" class="">
+			<img class="image" src="{{video.preview_image_url}}" />
+		</a>
+
+		<a href="#/play/{{video.embed_code}}" type="button playButton" class="btn btn-default btn-lg">
+
+		<span class="glyphicon glyphicon-play" aria-hidden="true"> Watch</span> 
+		</a>
+	</div>
+</div>
+
+<h3 class="homepageTitle" ng-cloak> Featured Videos</h3>
+<div class="featuredSlider">
+	<div class="slide" ng-repeat="video in featured" featured-slider-complete>
+			
+		<a href="#/play/{{video.embed_code}}" class="">
+			<img class="image" src="{{video.preview_image_url}}" />
+		</a>
+
+		<a href="#/play/{{video.embed_code}}" type="button playButton" class="btn btn-default btn-lg">
+
+		<span class="glyphicon glyphicon-play" aria-hidden="true"> Watch</span> 
+		</a>
+	</div>
+</div>
+
+<h3 class="homepageTitle" ng-cloak> Latest Videos</h3> 
+<div class="latestSlider">
+<div class="" ng-repeat="video in latest" latest-slider-complete>
+
+		<a href="#/play/{{video.embed_code}}" class="">
+			<img class="image" src="{{video.mobile_image_url}}" />
+		</a>
+
 	<a href="#/play/{{video.embed_code}}" type="button playButton" class="btn btn-default btn-lg">
 	  <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Watch
 	</a>
+</div>
+</div>
 
 </div>

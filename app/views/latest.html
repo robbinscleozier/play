@@ -1,4 +1,4 @@
-<div class="" ng-repeat="video in videos">
+<div class="" ng-repeat="video in latest">
 	<p class"videoTitle">{{video.display_title}} </p>
 
 	<div class="videos">
@@ -8,7 +8,9 @@
 		</a>
 	</div>
 
-	<a type="button playButton" class="btn btn-default btn-lg">
+
+	<a href="#/play/{{video.embed_code}}" type="button playButton" class="btn btn-default btn-lg">
 	  <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Watch
 	</a>
+
 </div>
