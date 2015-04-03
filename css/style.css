@@ -49,6 +49,7 @@ a:hover {
 }
 .videoTitle {
 	font-weight: 900;
+	margin-left: 15px !important;
 }
 .scrollable-header img {
 	margin-left: 15px;
@@ -71,4 +72,37 @@ a:hover {
 .playButton:hover, .btn-default:hover {
 	background-color: #000;
 	color: #fff;
+}
+.videoContainer {
+	width: 100%;
+	overflow: hidden;
+}
+.videoImage {
+	float: left;
+	width: 40%;
+}
+.videoInformation {
+	float: right;
+	width: 60%;
+}
+.videos img {
+  width:100%;
+  height:auto;
+}
+.video {
+  float: left;
+  position: relative;
+}
+.videos span {
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  background: url("../images/play.png") no-repeat;
+  background-position: 49% 55%;
+  background-size: 30%;
+}
+@media screen and (max-width: 480px) {
+  .video span {
+    background-size: 400%;
+  }
 }

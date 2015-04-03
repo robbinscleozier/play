@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="http://mobileangularui.com/dist/css/mobile-angular-ui-base.min.css" />
     <link rel="stylesheet" href="http://mobileangularui.com/dist/css/mobile-angular-ui-desktop.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-
   </head>
 
   <body ng-app="complexTvApp">
@@ -28,7 +27,7 @@
       <a class="list-group-item" href="#/">Latest </a>
       <a class="list-group-item" href="#/featured">Featured </a>
 
-      <li class="list-group-item" href="#"> Categories </li>
+      <li class="list-group-item" href="#"> Channels </li>
       <a ng-repeat="label in labels | filter:labelFilter" class="list-group-item" href="#/videos/{{label.name}}">{{label.name}}  </a>
 
       <li class="list-group-item" href="#"> Shows </li>
