@@ -1,33 +1,13 @@
-function videoPlayController($scope, $routeParams, $rootScope, app_service) {
-
-  $scope.videoInit = false;
+function videoPlayController($scope, $routeParams, $rootScope, $sce, app_service) {
 
   $scope.createVideo = function(external_id) {
-    return;
-  	OO.ready(function() {
-
-  		jQuery("#player").remove();
-
-  		jQuery('<div/>', {
-		    id: 'player'
-		}).appendTo('#playerwrapper');
-
-	    $scope.videoPlayer = OO.Player.create('player', external_id,{
-	      height:'100%',
-	      width:'100%'
-	    });
-    });
+    $scope.contentId = external_id;
+    $scope.iframe = "http://tvbeta.complex.com/tv/iframe?pId=556f8260656c47a4ab49bf6f2dde85f3&cId=" +  $scope.contentId + "&adSetCode=3f3b9e47c2954e21bdfb5618c47a61ea&site=complex&kw=";
+    $scope.iframeSource = $sce.trustAsResourceUrl($scope.iframe);
   };
 
   $scope.init = (function() {
-
-    if ($scope.videoInit == true) {
-      $scope.videoPlayer.destroy();
-      scope.$apply();
-    }
-
   	external_id = $routeParams.id;
     $scope.createVideo(external_id);
-    $scope.videoInit = true;
   })();
 }

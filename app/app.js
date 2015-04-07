@@ -1,7 +1,8 @@
 var complexTvApp = angular.module('complexTvApp', [ 
   'ngRoute',
   'mobile-angular-ui', 
-  'mobile-angular-ui.gestures'
+  'mobile-angular-ui.gestures',
+  'angular-loading-bar',
   ]).
 
 config(['$routeProvider',
@@ -22,6 +23,11 @@ config(['$routeProvider',
     when('/featured', {
       templateUrl: 'app/views/featured.html',
       controller: featuredController
+    }).
+
+    when('/popular', {
+      templateUrl: 'app/views/popular.html',
+      controller: popularController
     }).
 
     when('/shows', {
@@ -48,6 +54,10 @@ config(['$httpProvider', function ($httpProvider) {
   $httpProvider.defaults.headers.post = {};
   $httpProvider.defaults.headers.put = {};
   $httpProvider.defaults.headers.patch = {};
+}])
+.config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
+    cfpLoadingBarProvider.includeSpinner = false;
+    cfpLoadingBarProvider.includeBar = true;
 }]);
 
 var appModule = angular.module('complexTvApp'); 
