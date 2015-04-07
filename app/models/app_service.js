@@ -28,19 +28,26 @@ complexTvApp.factory('app_service', ['$rootScope', '$q', '$http',
     };
 
     self.getLastestVideosByLabel = function(label) {
+      label = self.cleanLabel(label);
      return self.makePost('labels/' + label +'/latest_videos');
     };
 
     self.getPopularVideosByLabel = function(label) {
+      label = self.cleanLabel(label);
       return self.makePost('labels/' + label +'/popular_videos');
     };
 
     self.getRelatedVideos = function(label) {
+      label = self.cleanLabel(label);
       return self.makePost('labels/' + label +'/popular_videos');
     };
 
     self.getComplexNews = function() {
       return self.makePost('tags/complex-news/latest');
+    };
+
+    self.cleanLabel = function(label) {
+      return label.replace( / +/g, '-') .toLowerCase();
     };
 
     return {

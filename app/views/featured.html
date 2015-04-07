@@ -2,13 +2,13 @@
 	<p class"videoTitle">{{video.name}} </p>
 
 	<div class="videos">
-		<a href="#/play/{{video.embed_code}}" class="">
+		<a href="#/play/{{video.embed_code}}/{{video.labels[1].name}}" class="">
 			<span></span>
 			<img class="image" src="{{video.preview_image_url}}" />
 		</a>
 	</div>
 
-	<a href="#/play/{{video.embed_code}}" type="button playButton" class="btn btn-default btn-lg">
+	<a href="#/play/{{video.embed_code}}/{{video.labels[1].name}}" type="button playButton" class="btn btn-default btn-lg">
 
 	<span class="glyphicon glyphicon-play" aria-hidden="true"> Watch</span> 
 	</a>

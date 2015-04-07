@@ -1,8 +1,22 @@
 <div id='playerwrapper'>
-	<iframe width="100%" height"370" ng-src="{{iframeSource}}" frameborder="0"> </iframe>
+	<iframe width="100%" height"450" ng-src="{{iframeSource}}" frameborder="0"> </iframe>
 </div> 
 <div class="description">
 </div>
 
-<div class="related">
+<br/>
+<h3 class="homepageTitle" ng-cloak> You might also like </h3>
+
+<div class="relatedVideosSlider">
+	<div class="slide" ng-repeat="video in relatedVideos" related-slider-complete>
+			
+		<a href="#/play/{{video.embed_code}}/{{video.labels[0].name}}" class="">
+			<img class="image" src="{{video.preview_image_url}}" />
+		</a>
+
+		<a href="#/play/{{video.embed_code}}/{{video.labels[0].name}}" type="button playButton" class="btn btn-default btn-lg">
+
+		<span class="glyphicon glyphicon-play" aria-hidden="true"> Watch</span> 
+		</a>
+	</div>
 </div>

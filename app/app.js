@@ -40,12 +40,12 @@ config(['$routeProvider',
       controller: videoController
     }).
 
-    when('/play/:id', {
+    when('/play/:id/:label', {
       templateUrl: 'app/views/play.html',
       controller: videoPlayController
     })
 
-    .otherwise({redirectTo:'/home'});
+    .otherwise({redirectTo:'/'});
   }
 ]).
 config(['$httpProvider', function ($httpProvider) {
@@ -90,6 +90,14 @@ appModule.directive('newsSliderComplete', function() {
   return function(scope, element, attrs) {
       if (scope.$last) setTimeout(function(){
           scope.$emit('newsSliderComplete', element, attrs);
+      }, 1);
+  };
+});
+
+appModule.directive('relatedSliderComplete', function() {
+  return function(scope, element, attrs) {
+      if (scope.$last) setTimeout(function(){
+          scope.$emit('relatedSliderComplete', element, attrs);
       }, 1);
   };
 });
