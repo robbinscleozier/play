@@ -50,6 +50,10 @@ complexTvApp.factory('app_service', ['$rootScope', '$q', '$http',
       return label.replace( / +/g, '-') .toLowerCase();
     };
 
+    self.getSponseredVideos = function() {
+      return self.makePost('videos/sponsored');
+    };
+
     return {
       
       getPopularVideos: function() {
@@ -86,6 +90,10 @@ complexTvApp.factory('app_service', ['$rootScope', '$q', '$http',
 
       getComplexNews: function() {
         return self.getComplexNews();
+      },
+
+      getSponseredVideos: function() {
+        return self.getSponseredVideos();
       }
     };
   }

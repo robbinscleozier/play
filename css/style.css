@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700,800);
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+
 @font-face{
     font-family: "Tungsten";
     src: url("http://assets.complex.com/webfonts/tungsten/8CBAD1A24A3FBE9FD.eot");
@@ -19,6 +20,10 @@ p {
 	margin-top: 2px;
 	margin-bottom: 4px;
 	color: #888;
+}
+#playerwrapper > iframe {
+	height: 220px;
+	width: 100%;
 }
 .navbar-brand {
 	background-color: #000 !important;
