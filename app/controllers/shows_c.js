@@ -11,7 +11,6 @@ function showsController($scope, $rootScope, app_service) {
   	for (var i = 0; i < shows.length; i++) {
   		shows[i].image = shows[i].name.replace( / +/g, '-') .toLowerCase();
   	}
-
   	return shows;
   };
 

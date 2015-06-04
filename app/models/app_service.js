@@ -29,7 +29,7 @@ complexTvApp.factory('app_service', ['$rootScope', '$q', '$http',
 
     self.getLastestVideosByLabel = function(label) {
       label = self.cleanLabel(label);
-     return self.makePost('labels/' + label +'/latest_videos');
+      return self.makePost('labels/' + label +'/latest_videos');
     };
 
     self.getPopularVideosByLabel = function(label) {
@@ -66,10 +66,6 @@ complexTvApp.factory('app_service', ['$rootScope', '$q', '$http',
 
       getShows: function() {
         return self.getShows();
-      },
-
-      getVideosByShow: function() {
-        return self.getVideosByShow();
       },
 
       getLabels: function() {

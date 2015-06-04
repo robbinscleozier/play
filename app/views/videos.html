@@ -1,14 +1,12 @@
 <div class="" ng-repeat="video in videos">
 	<p class"videoTitle">{{video.display_title}} </p>
-
 	<div class="videos">
 		<a href="#/play/{{video.embed_code}}/{{video.labels[1].name}}" class="">
 			<span></span>
 			<img class="image" src="{{video.mobile_image_url}}" />
 		</a>
 	</div>
-
 	<a type="button playButton" class="btn btn-default btn-lg">
-	  <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Watch
+		<span class="glyphicon glyphicon-play" aria-hidden="true"></span> Watch
 	</a>
 </div>

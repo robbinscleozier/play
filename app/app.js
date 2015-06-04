@@ -35,6 +35,11 @@ config(['$routeProvider',
       controller: showsController
     }).
 
+    when('/show/:label', {
+      templateUrl: 'app/views/show_view.html',
+      controller: showViewController
+    }).
+
     when('/videos/:label', {
       templateUrl: 'app/views/videos.html',
       controller: videoController
@@ -49,6 +54,7 @@ config(['$routeProvider',
   }
 ]).
 config(['$httpProvider', function ($httpProvider) {
+  
   //Reset headers to avoid OPTIONS request (aka preflight)
   $httpProvider.defaults.headers.common = {};
   $httpProvider.defaults.headers.post = {};
@@ -98,6 +104,14 @@ appModule.directive('relatedSliderComplete', function() {
   return function(scope, element, attrs) {
       if (scope.$last) setTimeout(function(){
           scope.$emit('relatedSliderComplete', element, attrs);
+      }, 1);
+  };
+});
+
+appModule.directive('showSliderComplete', function() {
+  return function(scope, element, attrs) {
+      if (scope.$last) setTimeout(function(){
+          scope.$emit('showSliderComplete', element, attrs);
       }, 1);
   };
 });
