@@ -136,7 +136,7 @@ a:hover {
  	width: 100%;
  }
 
-.video-image {
+.video-image, .show-image {
 	float: left;
 	width: 100%;
 	opacity: 0.8;

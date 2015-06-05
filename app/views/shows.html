@@ -1,7 +1,8 @@
-<div class="" ng-repeat="show in shows">
-	<p class"videoTitle"> <a href="#/show/{{show.slug}}">{{show.name}} </a></p>
-	<img src="http://vdn.complex.com/cdn/complextv/shows/large/{{show.image}}.png">
-	<a href="#/show/{{show.slug}}" type="button playButton" class="btn btn-default btn-lg">
-		<span class="glyphicon glyphicon-play" aria-hidden="true"> Watch  {{show.name}} Videos</span>
-	</a>
+<div class="video-container" ng-repeat="show in shows">
+	<div class="show-image">
+		<a href="#/show/{{show.slug}}">
+			<img src="http://vdn.complex.com/cdn/complextv/shows/small/{{show.slug}}.png">
+		</a>
+	</div>
+	<div class="video-title"> <a href="#/play/{{video.embed_code}}/{{video.labels[1].name}}"> Watch {{show.name}} Videos </a></div>
 </div>

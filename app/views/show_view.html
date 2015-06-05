@@ -1,14 +1,10 @@
 <img class="image" src="http://vdn.complex.com/cdn/complextv/shows/small/{{label}}.png" style="width:100%" />
 <br/>
-<div class="" ng-repeat="video in videos">
-	<p class"videoTitle">{{video.display_title}} </p>
-	<div class="videos">
-		<a href="#/play/{{video.embed_code}}/{{video.labels[0].name}}" class="">
-			<span></span>
-			<img class="image" src="{{video.mobile_image_url}}" />
+<div class="video-container" ng-repeat="video in videos">
+	<div class="video-image">
+		<a href="#/play/{{video.embed_code}}/{{video.labels[1].name}}">
+			<img src="{{video.mobile_image_url}}" />
 		</a>
 	</div>
-	<a href="#/play/{{video.embed_code}}/{{video.labels[0].name}}" type="button playButton" class="btn btn-default btn-lg">
-		<span class="glyphicon glyphicon-play" aria-hidden="true"></span> Watch
-	</a>
+	<div class="video-title"> <a href="#/play/{{video.embed_code}}/{{video.labels[1].name}}"> {{video.display_title}} </a></div>
 </div>
