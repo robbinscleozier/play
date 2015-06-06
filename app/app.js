@@ -68,38 +68,6 @@ config(['$httpProvider', function ($httpProvider) {
 
 var appModule = angular.module('complexTvApp'); 
 
-appModule.directive('popularSliderComplete', function() {
-  return function(scope, element, attrs) {
-      if (scope.$last) setTimeout(function(){
-          scope.$emit('popularSliderComplete', element, attrs);
-      }, 1);
-  };
-});
-
-appModule.directive('featuredSliderComplete', function() {
-  return function(scope, element, attrs) {
-      if (scope.$last) setTimeout(function(){
-          scope.$emit('featuredSliderComplete', element, attrs);
-      }, 1);
-  };
-});
-
-appModule.directive('latestSliderComplete', function() {
-  return function(scope, element, attrs) {
-      if (scope.$last) setTimeout(function(){
-          scope.$emit('latestSliderComplete', element, attrs);
-      }, 1);
-  };
-});
-
-appModule.directive('newsSliderComplete', function() {
-  return function(scope, element, attrs) {
-      if (scope.$last) setTimeout(function(){
-          scope.$emit('newsSliderComplete', element, attrs);
-      }, 1);
-  };
-});
-
 appModule.directive('relatedSliderComplete', function() {
   return function(scope, element, attrs) {
       if (scope.$last) setTimeout(function(){

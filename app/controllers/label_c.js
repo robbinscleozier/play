@@ -23,7 +23,6 @@ appModule.controller("labelController",["$scope", "app_service", function($scope
   };
 
   $scope.init = (function() {
-   //$scope.getLabels();
     $scope.getShows();
   })();
 

@@ -4,10 +4,14 @@ function showViewController($scope, $rootScope, $routeParams, app_service) {
   $scope.videos = [];
 
   $scope.getVideos = function(label) {
-    $scope.label = label;
+    $scope.label = $scope.slugifyLabel(label);
     app_service.getLastestVideosByLabel(label).then(function(response){
       $scope.videos = response.data.data;
     });
+  };
+
+  $scope.slugifyLabel = function(show) {
+    return show.replace( / +/g, '-') .toLowerCase();
   };
 
   $scope.init = (function() {

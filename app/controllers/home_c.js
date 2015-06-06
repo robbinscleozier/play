@@ -44,58 +44,6 @@ function homeController($scope, $rootScope, app_service) {
     $scope.getComplexNews();
     $scope.getShows();
 
-	  $scope.$on('popularSliderComplete', function(scope, element, attrs){
-      $('.popularSlider').bxSlider({
-        slideWidth: 4000,
-        minSlides: 2,
-        maxSlides: 8,
-        slideMargin: 10,
-        autoStart: true,
-        pager: false,
-        auto: true,
-        autoDelay: 1000
-      });
-    });
-
-    $scope.$on('featuredSliderComplete', function(scope, element, attrs){
-      $('.featuredSlider').bxSlider({
-        slideWidth: 4000,
-        minSlides: 2,
-        maxSlides: 8,
-        slideMargin: 10,
-        autoStart: true,
-        pager: false,
-        auto: true,
-        autoDelay: 1500
-      });
-    });
-  
-    $scope.$on('latestSliderComplete', function(scope, element, attrs){
-      $('.latestSlider').bxSlider({
-        slideWidth: 4000,
-        minSlides: 2,
-        maxSlides: 8,
-        slideMargin: 10,
-        autoStart: true,
-        pager: false,
-        auto: true,
-        autoDelay: 2000
-      });
-    });
-
-	  $scope.$on('newsSliderComplete', function(scope, element, attrs){
-      $('.newsSlider').bxSlider({
-        slideWidth: 4000,
-        minSlides: 2,
-        maxSlides: 8,
-        slideMargin: 10,
-        autoStart: true,
-        pager: false,
-        auto: true,
-        autoDelay: 2000
-      });
-     });
-
     $scope.$on('showSliderComplete', function(scope, element, attrs){
       $('.showsSlider').bxSlider({
         slideWidth: 4000,

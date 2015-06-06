@@ -129,7 +129,8 @@ a:hover {
  }
 
  /* New Styling */
- .video-container {
+
+.video-container, .show-image-container {
  	border-bottom: 2px solid #fff;
  	overflow: hidden;
  	position: relative;

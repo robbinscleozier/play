@@ -4,7 +4,7 @@
 <h3 class="homepageTitle" ng-cloak> You might also like </h3>
 <div class="relatedVideosSlider">
 	<div class="slide" ng-repeat="video in relatedVideos" related-slider-complete>
-		{{video.name.substring(0, 50)}}...
+		{{video.name.substring(0, 45)}}...
 		<a href="#/play/{{video.embed_code}}/{{video.labels[0].name}}" class="">
 			<img class="image" src="{{video.preview_image_url}}" />
 		</a>
