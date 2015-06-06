@@ -1,54 +1,5 @@
-<div class="homepage">
-	<h3 class="homepageTitle" ng-cloak> Complex News </h3>
-	<div class="newsSlider">
-		<div class="slide" ng-repeat="video in news" news-slider-complete>
-			<p class"videoTitle">{{video.name.substring(0, 45)}}... </p>
-			<a href="#/play/{{video.embed_code}}/{{video.labels[0].name}}" class="">
-				<img class="image" src="{{video.preview_image_url}}" />
-			</a>
-			<a href="#/play/{{video.embed_code}}/{{video.labels[0].name}}" type="button playButton" class="btn btn-default btn-lg">
-				<span class="glyphicon glyphicon-play" aria-hidden="true"> Watch</span>
-			</a>
-		</div>
-	</div>
-	
-	<h3 class="homepageTitle" ng-cloak> Popular </h3>
-	<div class="popularSlider">
-		<div class="slide" ng-repeat="video in popular" popular-slider-complete>
-			{{video.name.substring(0, 45)}}...
-			<a href="#/play/{{video.embed_code}}/{{video.labels[0].name}}" class="">
-				<img class="image" src="{{video.preview_image_url}}" />
-			</a>
-			<a href="#/play/{{video.embed_code}}/{{video.labels[0].name}}" type="button playButton" class="btn btn-default btn-lg">
-				<span class="glyphicon glyphicon-play" aria-hidden="true"> Watch</span>
-			</a>
-		</div>
-	</div>
-	<h3 class="homepageTitle" ng-cloak> Featured </h3>
-	<div class="featuredSlider">
-		<div class="slide" ng-repeat="video in featured" featured-slider-complete>
-			<p class"videoTitle">{{video.name.substring(0, 45)}}... </p>
-			<a href="#/play/{{video.embed_code}}/{{video.labels[0].name}}" class="">
-				<img class="image" src="{{video.preview_image_url}}" />
-			</a>
-			<a href="#/play/{{video.embed_code}}/{{video.labels[0].name}}" type="button playButton" class="btn btn-default btn-lg">
-				<span class="glyphicon glyphicon-play" aria-hidden="true"> Watch</span>
-			</a>
-		</div>
-	</div>
-	<h3 class="homepageTitle" ng-cloak> Latest </h3>
-	<div class="latestSlider">
-		<div class="" ng-repeat="video in latest" latest-slider-complete>
-			<p class"videoTitle">{{video.name.substring(0, 45)}}... </p>
-			<a href="#/play/{{video.embed_code}}" class="">
-				<img class="image" src="{{video.mobile_image_url}}" />
-			</a>
-			<a href="#/play/{{video.embed_code}}/{{video.labels[0].name}}" type="button playButton" class="btn btn-default btn-lg">
-				<span class="glyphicon glyphicon-play" aria-hidden="true"></span> Watch
-			</a>
-		</div>
-	</div>
-	<h3 class="homepageTitle" ng-cloak> Complex TV Shows</h3>
+	<div class="homepage">
+		<h3 class="homepageTitle" ng-cloak> Complex Orginals</h3>
 	<div class="showsSlider">
 		<div class="slide" ng-repeat="show in shows" show-slider-complete>
 			<p class"videoTitle">{{show.name}} </p>
@@ -59,5 +10,28 @@
 				<span class="glyphicon glyphicon-play" aria-hidden="true"> Watch  {{show.name}} Videos</span>
 			</a>
 		</div>
+	</div>
+	
+	<h3 class="homepageTitle" ng-cloak> Complex News </h3>
+
+	<div class="video-container" ng-repeat="video in news">
+		<div class="video-image">
+			<a href="#/play/{{video.embed_code}}/{{video.labels[0].name}}">
+				<img src="{{video.preview_image_url}}" />
+			</a>
+		</div>
+		<div class="video-title"> <a href="#/play/{{video.embed_code}}/{{video.labels[1].name}}"> {{video.name}} </a></div>
+	</div>
+
+	
+	<h3 class="homepageTitle" ng-cloak> Popular </h3>
+
+	<div class="video-container" ng-repeat="video in popular">
+		<div class="video-image">
+			<a href="#/play/{{video.embed_code}}/{{video.labels[1].name}}">
+				<img src="{{video.preview_image_url}}" />
+			</a>
+		</div>
+		<div class="video-title"> <a href="#/play/{{video.embed_code}}/{{video.labels[1].name}}"> {{video.name}} </a></div>
 	</div>
 </div>
