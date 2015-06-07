@@ -1,8 +1,6 @@
 function homeController($scope, $rootScope, app_service) {
 
-  $scope.latest = [];
   $scope.popular = [];
-  $scope.featured = [];
   $scope.news = [];
   $scope.shows = [];
 
@@ -18,18 +16,6 @@ function homeController($scope, $rootScope, app_service) {
     });
   };
 
-  $scope.getLatestVideos = function() {
-    app_service.getLastestVideos().then(function(response){
-      $scope.latest = response.data;
-    });
-  };
-
-  $scope.getFeaturedVideos = function() {
-    app_service.getFeaturedVideos().then(function(response){
-      $scope.featured = response.data;
-    });
-  };
-
   $scope.getShows = function() {
     app_service.getShows().then(function(response){
       shows = response.data;
@@ -40,6 +26,7 @@ function homeController($scope, $rootScope, app_service) {
   $scope.init = (function() {
     $scope.getComplexNews();
     $scope.getShows();
+    $scope.getPopularVideos();
 
     $scope.$on('showSliderComplete', function(scope, element, attrs){
       $('.showsSlider').bxSlider({

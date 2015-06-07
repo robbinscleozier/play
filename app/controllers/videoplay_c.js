@@ -47,7 +47,7 @@ function videoPlayController($scope, $routeParams, $rootScope, $sce, app_service
         autoStart: true,
         pager: false,
         auto: true,
-        autoDelay: 2000
+        autoDelay: 5000
       });
     });
   })();

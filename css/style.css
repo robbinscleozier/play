@@ -130,6 +130,11 @@ a:hover {
  	font-size: 20px;
  	font-family: Tungsten;
  	text-transform: capitalize;
+ 	margin-bottom: -5px;
+ }
+
+ .bx-wrapper {
+ 	margin: 7px auto !important;
  }
 
  /* New Styling */
@@ -138,6 +143,9 @@ a:hover {
  	border-bottom: 2px solid #fff;
  	overflow: hidden;
  	position: relative;
+ }
+
+ .video-container {
  	background-color: #ccc;
  	min-height: 220px;
  }
