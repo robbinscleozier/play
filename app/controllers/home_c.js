@@ -38,9 +38,6 @@ function homeController($scope, $rootScope, app_service) {
   };
 
   $scope.init = (function() {
-    $scope.getLatestVideos();
-    $scope.getFeaturedVideos();
-    $scope.getPopularVideos();
     $scope.getComplexNews();
     $scope.getShows();
 
