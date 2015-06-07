@@ -56,5 +56,7 @@ function homeController($scope, $rootScope, app_service) {
       });
      });
 
+    alert('loaded!');
+
   })();
 }
