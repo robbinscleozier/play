@@ -55,8 +55,5 @@ function homeController($scope, $rootScope, app_service) {
         auto: false,
       });
      });
-
-    alert('loaded!');
-
   })();
 }

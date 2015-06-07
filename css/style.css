@@ -134,6 +134,8 @@ a:hover {
  	border-bottom: 2px solid #fff;
  	overflow: hidden;
  	position: relative;
+ 	background-color: #ccc;
+ 	min-height: 220px;
  }
  .video-container img {
  	width: 100%;
