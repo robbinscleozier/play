@@ -56,6 +56,9 @@ li.list-group-item {
 a:hover {
 	color: #fff !important;
 }
+.sliderHide {
+	display: none;
+}
 .videoTitle {
 	font-weight: 900;
 	margin-left: 15px !important;

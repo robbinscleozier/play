@@ -29,6 +29,7 @@ function homeController($scope, $rootScope, app_service) {
     $scope.getPopularVideos();
 
     $scope.$on('showSliderComplete', function(scope, element, attrs){
+      $(".sliderHide").show();
       $('.showsSlider').bxSlider({
         slideWidth: 3000,
         minSlides: 2,

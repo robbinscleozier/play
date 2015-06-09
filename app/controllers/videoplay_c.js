@@ -38,7 +38,8 @@ function videoPlayController($scope, $routeParams, $rootScope, $sce, app_service
     $scope.createVideo(external_id);
     $scope.getRelatedVideos();
 
-    $scope.$on('relatedSliderComplete', function(scope, element, attrs){
+    $scope.$on('relatedSliderComplete', function(scope, element, attrs) {
+      $(".sliderHide").show();
       $('.relatedVideosSlider').bxSlider({
         slideWidth: 4000,
         minSlides: 2,

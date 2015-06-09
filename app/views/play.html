@@ -2,14 +2,16 @@
 	<iframe ng-src="{{iframeSource}}" frameborder="0"> </iframe>
 </div>
 <h3 class="homepageTitle" ng-cloak> You might also like </h3>
-<div class="relatedVideosSlider">
-	<div class="slide" ng-repeat="video in relatedVideos" related-slider-complete>
-		{{video.name.substring(0, 40)}}...
-		<a href="#/play/{{video.embed_code}}/{{video.labels[0].name}}" class="">
-			<img class="image" src="{{video.preview_image_url}}" />
-		</a>
-		<a href="#/play/{{video.embed_code}}/{{video.labels[0].name}}" type="button playButton" class="btn btn-default btn-lg">
-			<span class="glyphicon glyphicon-play" aria-hidden="true"> Watch</span>
-		</a>
+<div class="sliderHide">
+	<div class="relatedVideosSlider">
+		<div class="slide" ng-repeat="video in relatedVideos" related-slider-complete>
+			{{video.name.substring(0, 40)}}...
+			<a href="#/play/{{video.embed_code}}/{{video.labels[0].name}}" class="">
+				<img class="image" src="{{video.preview_image_url}}" />
+			</a>
+			<a href="#/play/{{video.embed_code}}/{{video.labels[0].name}}" type="button playButton" class="btn btn-default btn-lg">
+				<span class="glyphicon glyphicon-play" aria-hidden="true"> Watch</span>
+			</a>
+		</div>
 	</div>
 </div>

@@ -1,19 +1,19 @@
-	<div class="homepage">
+<div class="homepage">
+	<div class="sliderHide">
 		<h3 class="homepageTitle" ng-cloak> Complex Orginals</h3>
-	<div class="showsSlider">
-		<div class="slide" ng-repeat="show in shows" show-slider-complete>
-			<p class"videoTitle">{{show.name}} </p>
-			<a href="#/show/{{show.slug}}" class="">
-				<img class="image" src="http://vdn.complex.com/cdn/complextv/shows/small/{{show.slug}}.png" style="width:100%" />
-			</a>
-			<a href="#/show/{{show.slug}}" type="button playButton" class="btn btn-default btn-lg">
-				<span class="glyphicon glyphicon-play" aria-hidden="true"> Watch  {{show.name}} Videos</span>
-			</a>
+		<div class="showsSlider">
+			<div class="slide" ng-repeat="show in shows" show-slider-complete>
+				<p class"videoTitle">{{show.name}} </p>
+				<a href="#/show/{{show.slug}}" class="">
+					<img class="image" src="http://vdn.complex.com/cdn/complextv/shows/small/{{show.slug}}.png" style="width:100%" />
+				</a>
+				<a href="#/show/{{show.slug}}" type="button playButton" class="btn btn-default btn-lg">
+					<span class="glyphicon glyphicon-play" aria-hidden="true"> Watch  {{show.name}} Videos</span>
+				</a>
+			</div>
 		</div>
 	</div>
-	
 	<h3 class="homepageTitle" ng-cloak> Complex News </h3>
-
 	<div class="video-container" ng-repeat="video in news">
 		<div class="video-image">
 			<a href="#/play/{{video.embed_code}}/{{video.labels[0].name}}">
@@ -22,10 +22,8 @@
 		</div>
 		<div class="video-title"> <a href="#/play/{{video.embed_code}}/{{video.labels[1].name}}"> {{video.name}} </a></div>
 	</div>
-
 	
 	<h3 class="homepageTitle" ng-cloak> Popular </h3>
-
 	<div class="video-container" ng-repeat="video in popular">
 		<div class="video-image">
 			<a href="#/play/{{video.embed_code}}/{{video.labels[1].name}}">
