@@ -30,13 +30,14 @@ function homeController($scope, $rootScope, app_service) {
 
     $scope.$on('showSliderComplete', function(scope, element, attrs){
       $('.showsSlider').bxSlider({
-        slideWidth: 4000,
+        slideWidth: 3000,
         minSlides: 2,
         maxSlides: 30,
-        slideMargin: 10,
+        slideMargin: 2,
         autoStart: true,
+        moveSlides: 1,
         pager: false,
-        auto: false,
+        auto: true,
       });
      });
   })();

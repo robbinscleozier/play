@@ -113,11 +113,7 @@ a:hover {
   background-position: 49% 45%;
   background-size: 22%;
 }
-.bx-wrapper, .bx-viewport {
-  -moz-box-shadow: 0 0 0px #ccc !important;
-  -webkit-box-shadow: 0 0 0px #ccc !important;
-  box-shadow: 0 0 0px #ccc !important;
- }
+
  .homepage .image {
  	width: 181px !important;
  	height: 102px !important;
